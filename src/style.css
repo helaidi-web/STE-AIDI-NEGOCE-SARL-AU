@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap');
 
 :root {
   --font-primary: 'Inter', sans-serif;
@@ -3337,10 +3337,136 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+html[dir="rtl"] .contact-form input[type="email"],
+html[dir="rtl"] .contact-form input[type="tel"] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
 @media (max-width: 390px) {
   .nav-shell {
     min-height: 70px;
     padding-inline: 14px;
+  }
+
+  [dir="rtl"] body {
+    font-family: 'Noto Sans Arabic', var(--font-primary), sans-serif;
+  }
+
+  [dir="rtl"] .main-nav,
+  [dir="rtl"] .contact-inner,
+  [dir="rtl"] .nav-shell,
+  [dir="rtl"] .footer-grid,
+  [dir="rtl"] .about-actions,
+  [dir="rtl"] .depot-actions,
+  [dir="rtl"] .service-actions {
+    direction: rtl;
+  }
+
+  [dir="rtl"] .nav-link,
+  [dir="rtl"] .section-kicker,
+  [dir="rtl"] .eyebrow {
+    letter-spacing: 0;
+  }
+
+  [dir="rtl"] .hero-copy,
+  [dir="rtl"] .about-hero-content,
+  [dir="rtl"] .about-story-copy,
+  [dir="rtl"] .about-depot-copy,
+  [dir="rtl"] .contact-hero-content,
+  [dir="rtl"] .contact-info,
+  [dir="rtl"] .contact-form-card,
+  [dir="rtl"] .depot-hero-content,
+  [dir="rtl"] .depot-copy,
+  [dir="rtl"] .service-hero-copy,
+  [dir="rtl"] .service-article,
+  [dir="rtl"] .sidebar-card {
+    text-align: right;
+  }
+
+  [dir="rtl"] .hero-copy h1,
+  [dir="rtl"] .service-hero-copy h1,
+  [dir="rtl"] .about-hero-content h1 {
+    line-height: 1.14;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  [dir="rtl"] .hero-copy h1 span {
+    display: block;
+  }
+
+  [dir="rtl"] .hero-actions,
+  [dir="rtl"] .about-actions,
+  [dir="rtl"] .depot-actions {
+    justify-content: flex-start;
+  }
+
+  [dir="rtl"] .contact-form input:not([type="email"]):not([type="tel"]),
+  [dir="rtl"] .contact-form textarea {
+    direction: rtl;
+    text-align: right;
+  }
+
+  [dir="rtl"] .contact-form input[type="email"],
+  [dir="rtl"] .contact-form input[type="tel"] {
+    direction: ltr;
+    text-align: left;
+  }
+
+  [dir="rtl"] .contact-form-row,
+  [dir="rtl"] .contact-methods,
+  [dir="rtl"] .about-features {
+    direction: rtl;
+  }
+
+  [dir="rtl"] .contact-form label {
+    text-align: right;
+  }
+
+  [dir="rtl"] .about-breadcrumb,
+  [dir="rtl"] .contact-breadcrumb,
+  [dir="rtl"] .depot-breadcrumb {
+    direction: rtl;
+  }
+
+  [dir="rtl"] .language-menu {
+    left: 0;
+    right: auto;
+    text-align: right;
+  }
+
+  [dir="rtl"] .language-menu button {
+    text-align: right;
+  }
+
+  [dir="rtl"] .mobile-menu-actions {
+    direction: rtl;
+  }
+
+  @media (max-width: 768px) {
+    [dir="rtl"] .main-nav .nav-link,
+    [dir="rtl"] .main-nav .mobile-menu-action {
+      text-align: right;
+      justify-content: flex-start;
+    }
+
+    [dir="rtl"] .main-nav .mobile-menu-action.quote,
+    [dir="rtl"] .mobile-language-picker .language-trigger {
+      justify-content: center;
+      text-align: center;
+    }
+
+    [dir="rtl"] .hero-copy,
+    [dir="rtl"] .about-hero-content,
+    [dir="rtl"] .contact-hero-content {
+      text-align: center;
+    }
+
+    [dir="rtl"] .hero-actions,
+    [dir="rtl"] .about-actions {
+      justify-content: center;
+    }
   }
 
   .brand img {
