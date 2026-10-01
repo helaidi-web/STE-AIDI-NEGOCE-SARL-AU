@@ -44,8 +44,8 @@ translations.en = {
 };
 
 translations.ar = {
-  ...translations.en, quote: 'اطلب عرضاً →', home: 'الرئيسية', about: 'من نحن', activities: 'أنشطتنا', depot: 'مستودعنا', partners: 'شركاؤنا', contact: 'اتصل بنا', city: 'فاس، المغرب', language: 'اللغة',
-  experience: 'أكثر من 20 عاماً من الخبرة', heroText: 'شريككم الموثوق في التجارة والاستيراد والتصدير والأعمال المتنوعة والحلول الشمسية وتسويق الدقيق والنشا والسميد والنخالة.', discover: 'اكتشف أنشطتنا →', reach: 'تواصل معنا',
+  ...translations.en, quote: 'اطلب عرضاً ←', home: 'الرئيسية', about: 'من نحن', activities: 'أنشطتنا', depot: 'مستودعنا', partners: 'شركاؤنا', contact: 'اتصل بنا', city: 'فاس، المغرب', language: 'اللغة',
+  experience: 'أكثر من 20 عاماً من الخبرة', heroText: 'شريككم الموثوق في التجارة والاستيراد والتصدير والأعمال المتنوعة والحلول الشمسية وتسويق الدقيق والنشا والسميد والنخالة.', discover: 'اكتشف أنشطتنا ←', reach: 'تواصل معنا',
   years: 'سنوات الخبرة', companies: 'الشركات الشريكة', area: 'مساحة المستودع', fields: 'مجالات النشاط', activitiesKicker: 'أنشطتنا', activitiesTitle: 'حلول متكاملة لتلبية احتياجاتكم', activitiesText: 'تعمل شركة AIDI NEGOCE SARL AU في قطاعات متعددة لمساندة عملائها وشركائها بحلول موثوقة ومناسبة ومستدامة. تتيح لنا خبرتنا الاستجابة بفعالية لاحتياجات السوق.',
   learn: 'اعرفوا المزيد ←', navigation: 'التنقل', email: 'البريد الإلكتروني', phone: 'الهاتف', legal: 'إشعار قانوني', privacy: 'سياسة الخصوصية', rights: 'جميع الحقوق محفوظة.', approach: 'نهجنا', quoteNeed: 'هل تحتاجون إلى عرض؟', quoteText: 'فريقنا رهن إشارتكم لتقديم إجابة مناسبة لمشروعكم.', contactWhatsApp: 'تواصلوا معنا عبر واتساب', sendEmail: 'إرسال بريد إلكتروني', back: 'العودة إلى الأنشطة', useful: 'معلومات مفيدة', usefulText: 'حل واضح واحترافي ومناسب لاحتياجات شركائنا.', google: 'البحث على Google ←', serviceKicker: 'أنشطتنا', requiredError: 'يرجى ملء جميع الحقول المطلوبة بشكل صحيح.', sending: 'جارٍ الإرسال...', success: 'تم إرسال رسالتكم بنجاح. سيرد عليكم فريقنا في أقرب وقت ممكن.', serverError: 'حدث خطأ. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة عبر واتساب.', sendMessage: 'إرسال الرسالة ←', galleryPrev: 'الصورة السابقة', galleryNext: 'الصورة التالية', close: 'إغلاق', mapAria: 'خريطة تفاعلية لموقع AIDI NÉGOCE', footerText: 'شريككم الموثوق في التجارة والاستيراد والتصدير ومجالات متعددة.',
   partnersKicker: 'شركاؤنا', partnersTitle: 'علاقات مهنية مستدامة', partnersText: 'نبني شراكات تقوم على الثقة والجودة والالتزام من أجل خلق فرص مستدامة.', partnersCta: 'كونوا شركاءنا',
@@ -243,7 +243,6 @@ function commonHeader(activeRoute = 'home') {
           <a href="/a-propos" class="nav-link ${activeRoute === 'about' ? 'active' : ''}">${tr('about')}</a>
           <a href="/#activites" class="nav-link">${tr('activities')}</a>
           <a href="/notre-depot" class="nav-link ${activeRoute === 'depot' ? 'active' : ''}">${tr('depot')}</a>
-          <a href="/nos-partenaires" class="nav-link ${activeRoute === 'partners' ? 'active' : ''}">${tr('partners')}</a>
           <a href="/contact" class="nav-link ${activeRoute === 'contact' ? 'active' : ''}">${tr('contact')}</a>
           <div class="mobile-menu-actions">
             <a class="mobile-menu-action whatsapp" href="${companyInfo.whatsapp}" target="_blank" rel="noreferrer">WhatsApp</a>
