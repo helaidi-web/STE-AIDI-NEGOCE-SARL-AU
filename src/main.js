@@ -212,6 +212,14 @@ function commonHeader(activeRoute = 'home') {
           <div class="mobile-menu-actions">
             <a class="mobile-menu-action whatsapp" href="${companyInfo.whatsapp}" target="_blank" rel="noreferrer">WhatsApp</a>
             <a class="mobile-menu-action quote" href="${companyInfo.whatsapp}" target="_blank" rel="noreferrer">${tr('quote')}</a>
+            <div class="language-picker mobile-language-picker">
+              <button class="language-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="${tr('language')}">${currentLanguage.toUpperCase()} <span aria-hidden="true">▾</span></button>
+              <div class="language-menu" role="menu">
+                <button type="button" role="menuitem" data-language="fr">🇫🇷 Français</button>
+                <button type="button" role="menuitem" data-language="en">🇬🇧 English</button>
+                <button type="button" role="menuitem" data-language="ar">🇲🇦 العربية</button>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
@@ -633,10 +641,11 @@ function setupInteractions() {
     window.requestAnimationFrame(() => map.invalidateSize());
   }
 
-  const languagePicker = document.querySelector('.language-picker');
-  const languageTrigger = languagePicker?.querySelector('.language-trigger');
-  if (languagePicker && languageTrigger) {
-    languageTrigger.addEventListener('click', () => {
+  document.querySelectorAll('.language-picker').forEach((languagePicker) => {
+    const languageTrigger = languagePicker.querySelector('.language-trigger');
+    if (!languageTrigger) return;
+    languageTrigger.addEventListener('click', (event) => {
+      event.stopPropagation();
       const open = languagePicker.classList.toggle('open');
       languageTrigger.setAttribute('aria-expanded', String(open));
     });
@@ -652,7 +661,7 @@ function setupInteractions() {
         languageTrigger.setAttribute('aria-expanded', 'false');
       }
     });
-  }
+  });
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
   if (menuToggle && nav) {

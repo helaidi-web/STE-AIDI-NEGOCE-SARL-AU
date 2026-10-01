@@ -3139,6 +3139,32 @@ h1, h2, h3, h4, h5, h6,
   display: none;
 }
 
+.mobile-language-picker {
+  position: relative;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+}
+
+.mobile-language-picker .language-trigger {
+  min-width: 116px;
+  min-height: 40px;
+  border-radius: 999px;
+  font-size: .78rem;
+}
+
+.mobile-language-picker .language-menu {
+  top: auto;
+  bottom: calc(100% + 8px);
+  right: 50%;
+  transform: translate(50%, 5px);
+}
+
+.mobile-language-picker.open .language-menu {
+  transform: translate(50%, 0);
+}
+
 @media (max-width: 768px) {
   .top-contact-bar {
     display: none;
